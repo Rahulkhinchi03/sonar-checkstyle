@@ -33,4 +33,4 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git commit -am "minor: Bump year to ${{ env.YEAR }}"
-          git show
+          git push
