@@ -7,7 +7,7 @@
 name: "Bump license year"
 on:
   schedule:
-    - cron: '11 18 16 7 *'
+    - cron: '18 18 16 7 *'
 permissions:
   contents: write
   pull-requests: write
@@ -26,7 +26,7 @@ jobs:
           echo "::set-output name=year::$(date +'%Y')"
       - name: Modify Files
         run: |
-          ./.ci/bump-license-year.sh $(expr ${{ env.YEAR }} -2 ) ${{ env.YEAR }} .
+          ./.ci/bump-license-year.sh $(expr ${{ env.YEAR }} + 1) ${{ env.YEAR }} .
         env:
           YEAR: ${{ steps.CURRENT_YEAR.outputs.year }}
       - name: Push commit
