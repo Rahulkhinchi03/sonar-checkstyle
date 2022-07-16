@@ -6,8 +6,7 @@
 #############################################################################
 name: "Bump license year"
 on:
-  schedule:
-    - cron: '18 18 16 7 *'
+  workflow_dispatch:
 permissions:
   contents: write
   pull-requests: write
