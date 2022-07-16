@@ -25,7 +25,7 @@ jobs:
           echo "::set-output name=year::$(date + 2023)"
       - name: Modify Files
         run: |
-          ./.ci/bump-license-year.sh $(expr ${{ 2023 }} ) ${{ 2023 }} .
+          ./.ci/bump-license-year.sh 2023 .
         env:
           YEAR: ${{ steps.CURRENT_YEAR.outputs.year }}
       - name: Push commit
