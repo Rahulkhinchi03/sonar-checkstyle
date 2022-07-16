@@ -7,7 +7,7 @@
 name: "Bump license year"
 on:
   schedule:
-    - cron: '3 15 16 7 *'
+    - cron: '10 15 16 7 *'
 permissions:
   contents: write
   pull-requests: write
